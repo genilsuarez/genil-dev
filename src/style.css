@@ -484,12 +484,12 @@ a {
 .project-more summary {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.1rem;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
   cursor: pointer;
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-h);
   list-style: none;
   transition: background 0.2s var(--ease);
