@@ -1,5 +1,5 @@
 import "./style.css";
-import { profile, projects, expertise, topPosts, postsStats, studyMaterials } from "./data/content";
+import { profile, projects, expertise, postsStats, studyMaterials } from "./data/content";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -11,10 +11,6 @@ const icons = {
   stack: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>`,
   agent: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>`,
 };
-
-function sectionBadge(n: string) {
-  return `<span class="badge">${n}</span>`;
-}
 
 function projectCard(p: (typeof projects)[number], featured = false) {
   return `
@@ -60,7 +56,7 @@ app.innerHTML = `
       <nav class="topbar__nav">
         <a href="#proyectos">Proyectos</a>
         <a href="#expertise">Expertise</a>
-        <a href="#contenido">Contenido</a>
+        <a href="#estudio">Estudio</a>
       </nav>
       <button class="theme-toggle" aria-label="Cambiar tema" type="button">
         <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -70,33 +66,21 @@ app.innerHTML = `
   </header>
 
   <main>
+    <!-- Hero: compact, punchy -->
     <section id="top" class="hero">
       <p class="hero__eyebrow">${profile.location} · ${profile.company}</p>
       <h1>${profile.name}</h1>
-      <ul class="role-legend">
-        ${profile.roles
-          .map(
-            (r, i) => `
-          <li class="role-legend__item" style="animation-delay:${0.32 + i * 0.05}s">
-            <span class="role-legend__swatch role-legend__swatch--${r.color}"></span>
-            <span class="role-legend__label">${r.label}</span>
-          </li>
-        `
-          )
-          .join("")}
+      <p class="hero__tagline">Cloud Architecture & Platform Engineering Manager · IA aplicada en operaciones TI</p>
+      <ul class="hero__highlights">
+        <li><span class="hero__highlight hero__highlight--blue">18 años infraestructura</span></li>
+        <li><span class="hero__highlight hero__highlight--green">Plataforma de pagos PCI</span></li>
+        <li><span class="hero__highlight hero__highlight--purple">IA agéntica en producción</span></li>
       </ul>
-      <div class="hero__summary-card">
-        <p class="hero__summary">${profile.summary}</p>
-        <ul class="hero__highlights">
-          <li><span class="hero__highlight hero__highlight--blue">18 años infraestructura</span></li>
-          <li><span class="hero__highlight hero__highlight--green">Plataforma de pagos PCI</span></li>
-          <li><span class="hero__highlight hero__highlight--purple">IA en operaciones TI</span></li>
-        </ul>
-      </div>
     </section>
 
+    <!-- Projects: the star -->
     <section id="proyectos" class="section">
-      <h2 class="section__title">${sectionBadge("1")} Proyectos personales destacados</h2>
+      <h2 class="section__title">Proyectos</h2>
       <div class="project-grid project-grid--featured">
         ${featuredProjects.map((p) => projectCard(p, true)).join("")}
       </div>
@@ -111,8 +95,9 @@ app.innerHTML = `
       </details>
     </section>
 
+    <!-- Expertise: functional, brief -->
     <section id="expertise" class="section">
-      <h2 class="section__title">${sectionBadge("2")} Stack técnico / Expertise</h2>
+      <h2 class="section__title">Expertise</h2>
       <div class="expertise-grid">
         ${expertise
           .map(
@@ -131,15 +116,9 @@ app.innerHTML = `
       </div>
     </section>
 
-    <section id="contenido" class="section">
-      <h2 class="section__title">${sectionBadge("3")} Contenido técnico</h2>
-      <p class="section__lead">
-        ${postsStats.totalPosts}+ publicaciones técnicas en LinkedIn ·
-        ${postsStats.followers.toLocaleString("es-CL")}+ seguidores.
-        Foco en arquitecturas de IA agéntica, MCP, y FinOps de IA.
-      </p>
-
-      <h3 class="subsection__title">Material de estudio</h3>
+    <!-- Study materials -->
+    <section id="estudio" class="section">
+      <h2 class="section__title">Material de estudio</h2>
       <div class="study-grid">
         ${studyMaterials
           .map(
@@ -162,29 +141,14 @@ app.innerHTML = `
           )
           .join("")}
       </div>
-
-      <h3 class="subsection__title">Top posts en LinkedIn</h3>
-      <ul class="posts-list">
-        ${topPosts
-          .map(
-            (post) => `
-          <li>
-            <span class="posts-list__title">${post.title}</span>
-            <span class="posts-list__meta">${post.month} · ${post.impressions.toLocaleString("es-CL")} impresiones</span>
-          </li>
-        `
-          )
-          .join("")}
-      </ul>
     </section>
-
   </main>
 
   <footer class="footer footer--sticky">
     <div class="footer__inner">
       <span class="footer__cta">Abierto a conversar sobre cloud, platform engineering e IA agéntica.</span>
       <nav class="footer__links">
-        <a href="${profile.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="${profile.linkedin}" target="_blank" rel="noopener">LinkedIn <span class="footer__stat">${postsStats.followers.toLocaleString("es-CL")}+</span></a>
         <a href="${profile.github}" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
     </div>
