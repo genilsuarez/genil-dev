@@ -64,7 +64,7 @@ export const projects: Project[] = [
     tagline: "Quiz de banderas con arquitectura MVC",
     description:
       "250+ países y territorios, 3 modos de juego (banderas, capitales, letras en caída), diseño editorial propio.",
-    stack: ["JavaScript", "Vite", "MVC"],
+    stack: ["JavaScript", "Vite"],
     live: "https://genilsuarez.github.io/flagmaster/",
     repo: "https://github.com/genilsuarez/flagmaster",
     featured: true,
