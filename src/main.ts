@@ -1,5 +1,5 @@
 import "./style.css";
-import { profile, projects, expertise, topPosts, postsStats } from "./data/content";
+import { profile, projects, expertise, topPosts, postsStats, studyMaterials } from "./data/content";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -138,6 +138,33 @@ app.innerHTML = `
         ${postsStats.followers.toLocaleString("es-CL")}+ seguidores.
         Foco en arquitecturas de IA agéntica, MCP, y FinOps de IA.
       </p>
+
+      <h3 class="subsection__title">Material de estudio</h3>
+      <div class="study-grid">
+        ${studyMaterials
+          .map(
+            (m) => `
+          <article class="study-card study-card--${m.color}">
+            <div class="study-card__icon">${icons[m.icon]}</div>
+            <div class="study-card__body">
+              <h4>${m.name}</h4>
+              <p class="study-card__tagline">${m.tagline}</p>
+              <p class="study-card__desc">${m.description}</p>
+              <ul class="stack-list">
+                ${m.topics.map((t) => `<li>${t}</li>`).join("")}
+              </ul>
+              <div class="study-card__links">
+                <a href="${m.live}" target="_blank" rel="noopener">Ver ↗</a>
+                <a href="${m.repo}" target="_blank" rel="noopener">Código ↗</a>
+              </div>
+            </div>
+          </article>
+        `
+          )
+          .join("")}
+      </div>
+
+      <h3 class="subsection__title">Top posts en LinkedIn</h3>
       <ul class="posts-list">
         ${topPosts
           .map(

@@ -135,6 +135,42 @@ export const expertise: ExpertiseArea[] = [
   },
 ];
 
+export interface StudyMaterial {
+  name: string;
+  tagline: string;
+  description: string;
+  topics: string[];
+  live: string;
+  repo: string;
+  icon: "agent" | "stack" | "cloud";
+  color: AccentColor;
+}
+
+export const studyMaterials: StudyMaterial[] = [
+  {
+    name: "Agent Study",
+    tagline: "Context engineering para agentes de IA",
+    description:
+      "Guía visual interactiva sobre context engineering, token tax, workflow rules, SDD harness y glosario agéntico.",
+    topics: ["Context Engineering", "Token Tax", "Workflow Rules", "SDD Harness"],
+    live: "https://genilsuarez.github.io/agentstudy/",
+    repo: "https://github.com/genilsuarez/agentstudy",
+    icon: "agent",
+    color: "purple",
+  },
+  {
+    name: "LLM Study",
+    tagline: "Fundamentos de IA y modelos de lenguaje",
+    description:
+      "Material de estudio interactivo: embeddings, mecanismo de atención, arquitectura transformer, inferencia y agentes.",
+    topics: ["Embeddings", "Atención", "Transformers", "Inferencia", "Agentes"],
+    live: "https://genilsuarez.github.io/llmstudy/",
+    repo: "https://github.com/genilsuarez/llmstudy",
+    icon: "stack",
+    color: "blue",
+  },
+];
+
 export const postsStats = {
   followers: 2000,
   totalPosts: 50,
