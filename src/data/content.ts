@@ -70,6 +70,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: "LearnHub",
+    tagline: "Ejercicios interactivos de ortografía y gramática inglesa",
+    description:
+      "Espacio personal de estudio de inglés: reglas de spelling (-ing, -ed), noun adjuncts, con modos Study/Challenge/Timed, niveles progresivos y spaced repetition básico vía localStorage.",
+    stack: ["HTML", "Vanilla JS"],
+    live: "https://genilsuarez.github.io/learnhub/",
+    repo: "https://github.com/genilsuarez/learnhub",
+    status: "Exploratorio",
+  },
+  {
     name: "CapiChef",
     tagline: "Juego educativo de matemáticas para niños 4–10 años",
     description:
@@ -86,16 +96,6 @@ export const projects: Project[] = [
     stack: ["TypeScript", "Vite", "Zustand", "Canvas API"],
     live: "https://genilsuarez.github.io/capicatcher/",
     repo: "https://github.com/genilsuarez/capicatcher",
-  },
-  {
-    name: "LearnHub",
-    tagline: "Ejercicios interactivos de ortografía y gramática inglesa",
-    description:
-      "Espacio personal de estudio de inglés: reglas de spelling (-ing, -ed), noun adjuncts, con modos Study/Challenge/Timed, niveles progresivos y spaced repetition básico vía localStorage.",
-    stack: ["HTML", "Vanilla JS"],
-    live: "https://genilsuarez.github.io/learnhub/",
-    repo: "https://github.com/genilsuarez/learnhub",
-    status: "Exploratorio",
   },
 ];
 
