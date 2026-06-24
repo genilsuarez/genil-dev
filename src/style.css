@@ -269,7 +269,7 @@ a {
 .hero {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.2rem var(--space) 1rem;
+  padding: 0.9rem var(--space) 0.8rem;
   scroll-margin-top: 4.5rem;
 }
 
@@ -279,7 +279,7 @@ a {
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.04em;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
   animation: reveal 0.5s var(--ease) both;
 }
 
@@ -297,7 +297,7 @@ a {
 .hero__tagline {
   font-size: clamp(0.9rem, 1.5vw, 1.05rem);
   color: var(--text-soft);
-  margin: 0.35rem 0 0.7rem;
+  margin: 0.3rem 0 0.55rem;
   max-width: 50ch;
   animation: reveal 0.55s var(--ease) 0.15s both;
 }
@@ -350,7 +350,7 @@ a {
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.2rem var(--space);
+  padding: 0.95rem var(--space);
   border-top: 1px solid var(--border);
   scroll-margin-top: 4.5rem;
 }
@@ -360,7 +360,7 @@ a {
   font-weight: 400;
   font-size: clamp(1.5rem, 3.5vw, 1.8rem);
   color: var(--text-h);
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.6rem;
   letter-spacing: -0.01em;
 }
 
@@ -369,8 +369,8 @@ a {
   background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1rem 1.2rem;
-  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
   box-shadow: var(--shadow-sm);
   transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
 }
@@ -461,7 +461,7 @@ a {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.7rem;
+  gap: 0.55rem;
 }
 
 .project-grid .project-card {
@@ -470,7 +470,7 @@ a {
 
 .project-grid--featured {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 /* "More projects" disclosure */
@@ -604,13 +604,13 @@ a {
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.7rem;
+  gap: 0.55rem;
 }
 
 .expertise-card {
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1rem 1.1rem;
+  padding: 0.8rem 0.9rem;
   background: var(--bg-raised);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
 }
@@ -710,13 +710,13 @@ a {
 .study-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 
 .study-card {
   display: flex;
-  gap: 0.8rem;
-  padding: 1rem 1.1rem;
+  gap: 0.65rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--paper);
