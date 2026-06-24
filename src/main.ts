@@ -55,8 +55,8 @@ app.innerHTML = `
       <a class="topbar__logo" href="#top">genil<span class="accent">.dev</span></a>
       <nav class="topbar__nav">
         <a href="#proyectos">Proyectos</a>
-        <a href="#expertise">Expertise</a>
         <a href="#estudio">Estudio</a>
+        <a href="#expertise">Expertise</a>
       </nav>
       <button class="theme-toggle" aria-label="Cambiar tema" type="button">
         <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -95,27 +95,6 @@ app.innerHTML = `
       </details>
     </section>
 
-    <!-- Expertise: functional, brief -->
-    <section id="expertise" class="section">
-      <h2 class="section__title">Expertise</h2>
-      <div class="expertise-grid">
-        ${expertise
-          .map(
-            (e) => `
-          <article class="expertise-card expertise-card--${e.color}">
-            <div class="expertise-card__icon">${icons[e.icon]}</div>
-            <h3>${e.title}</h3>
-            <p class="expertise-card__summary">${e.summary}</p>
-            <ul>
-              ${e.items.map((i) => `<li>${i}</li>`).join("")}
-            </ul>
-          </article>
-        `
-          )
-          .join("")}
-      </div>
-    </section>
-
     <!-- Study materials -->
     <section id="estudio" class="section">
       <h2 class="section__title">Material de estudio</h2>
@@ -136,6 +115,27 @@ app.innerHTML = `
                 <a href="${m.live}" target="_blank" rel="noopener">Ver ↗</a>
               </div>
             </div>
+          </article>
+        `
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <!-- Expertise: about/background -->
+    <section id="expertise" class="section">
+      <h2 class="section__title">Expertise</h2>
+      <div class="expertise-grid">
+        ${expertise
+          .map(
+            (e) => `
+          <article class="expertise-card expertise-card--${e.color}">
+            <div class="expertise-card__icon">${icons[e.icon]}</div>
+            <h3>${e.title}</h3>
+            <p class="expertise-card__summary">${e.summary}</p>
+            <ul>
+              ${e.items.map((i) => `<li>${i}</li>`).join("")}
+            </ul>
           </article>
         `
           )
