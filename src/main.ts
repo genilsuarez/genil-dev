@@ -155,7 +155,6 @@ app.innerHTML = `
               </ul>
               <div class="study-card__links">
                 <a href="${m.live}" target="_blank" rel="noopener">Ver ↗</a>
-                <a href="${m.repo}" target="_blank" rel="noopener">Código ↗</a>
               </div>
             </div>
           </article>
