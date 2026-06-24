@@ -54,7 +54,7 @@ export const projects: Project[] = [
     tagline: "App de aprendizaje de inglés, CEFR A1–C2",
     description:
       "10 modos de aprendizaje, 276 módulos de contenido, modo offline y bilingüe EN/ES. Pipeline CI/CD con validación automática de contenido y calidad.",
-    stack: ["React 18", "TypeScript", "Vite", "Zustand"],
+    stack: ["React", "TypeScript", "Vite", "Zustand"],
     live: "https://genilsuarez.github.io/fluentflow/",
     repo: "https://github.com/genilsuarez/fluentflow",
     featured: true,
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     tagline: "Juego educativo de matemáticas para niños 4–10 años",
     description:
       "Un capybara chef guía al jugador a preparar recetas tocando ingredientes en orden; desafíos de suma, resta y multiplicación entre niveles. 12 skins y 12 logros desbloqueables. 261 tests automatizados.",
-    stack: ["React 18", "Vite", "Tailwind CSS", "Vitest"],
+    stack: ["React", "Vite", "Tailwind CSS", "Vitest"],
     live: "https://genilsuarez.github.io/capichef/",
     repo: "https://github.com/genilsuarez/capichef",
   },
