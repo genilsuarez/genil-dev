@@ -350,7 +350,7 @@ a {
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.95rem var(--space);
+  padding: 0.6rem var(--space) 0.95rem;
   border-top: 1px solid var(--border);
   scroll-margin-top: 4.5rem;
 }
@@ -360,7 +360,7 @@ a {
   font-weight: 400;
   font-size: clamp(1.5rem, 3.5vw, 1.8rem);
   color: var(--text-h);
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
   letter-spacing: -0.01em;
 }
 
