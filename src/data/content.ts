@@ -53,7 +53,7 @@ export const projects: Project[] = [
     name: "FluentFlow",
     tagline: "App de aprendizaje de inglés, CEFR A1–C2",
     description:
-      "10 modos de aprendizaje, 276 módulos de contenido, modo offline y bilingüe EN/ES. CI/CD completo con validaciones de contenido, seguridad y calidad.",
+      "10 modos de aprendizaje, 276 módulos de contenido, modo offline y bilingüe EN/ES. Pipeline CI/CD con validación automática de contenido y calidad.",
     stack: ["React 18", "TypeScript", "Vite", "Zustand"],
     live: "https://genilsuarez.github.io/fluentflow/",
     repo: "https://github.com/genilsuarez/fluentflow",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     name: "FlagMaster",
     tagline: "Quiz de banderas con arquitectura MVC",
     description:
-      "250+ países y territorios, 3 modos de juego (banderas, capitales, letras en caída), diseño editorial propio. Bundle de producción menor a 22KB gzipped.",
+      "250+ países y territorios, 3 modos de juego (banderas, capitales, letras en caída), diseño editorial propio.",
     stack: ["Vanilla JS", "Vite", "MVC"],
     live: "https://genilsuarez.github.io/flagmaster/",
     repo: "https://github.com/genilsuarez/flagmaster",
