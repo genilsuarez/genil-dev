@@ -279,7 +279,7 @@ a {
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.04em;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.25rem;
   animation: reveal 0.5s var(--ease) both;
 }
 
