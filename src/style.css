@@ -211,7 +211,7 @@ a {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.75rem var(--space);
+  padding: 0.65rem var(--space);
 }
 
 .topbar__logo {
@@ -797,7 +797,7 @@ a {
   background: var(--footer-bg);
   backdrop-filter: blur(12px) saturate(1.2);
   border-top: 1px solid var(--border);
-  padding: 0.55rem 0;
+  padding: 0.45rem 0;
 }
 
 .footer__inner {
