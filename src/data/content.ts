@@ -64,7 +64,7 @@ export const projects: Project[] = [
     tagline: "Quiz de banderas con arquitectura MVC",
     description:
       "250+ países y territorios, 3 modos de juego (banderas, capitales, letras en caída), diseño editorial propio.",
-    stack: ["Vanilla JS", "Vite", "MVC"],
+    stack: ["JavaScript", "Vite", "MVC"],
     live: "https://genilsuarez.github.io/flagmaster/",
     repo: "https://github.com/genilsuarez/flagmaster",
     featured: true,
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     tagline: "Ejercicios interactivos de ortografía y gramática inglesa",
     description:
       "Espacio personal de estudio de inglés: reglas de spelling (-ing, -ed), noun adjuncts, con modos Study/Challenge/Timed, niveles progresivos y spaced repetition básico vía localStorage.",
-    stack: ["HTML", "Vanilla JS"],
+    stack: ["HTML", "JavaScript"],
     live: "https://genilsuarez.github.io/learnhub/",
     repo: "https://github.com/genilsuarez/learnhub",
     status: "Exploratorio",
